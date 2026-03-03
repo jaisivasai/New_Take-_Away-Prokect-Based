@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    
+    html { scroll-behavior: smooth; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg,#6366f1,#8b5cf6);
+      transition: .3s;
+      border-radius: 999px;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .float { animation: float 5s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .fade { opacity:0; transform:translateY(30px); transition:1s ease; }
+    .fade.show { opacity:1; transform:translateY(0); }
+ 
+    html { scroll-behavior: smooth; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg,#6366f1,#8b5cf6);
+      transition: .3s;
+      border-radius: 999px;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .fade { opacity:0; transform:translateY(30px); transition:1s ease; }
+    .fade.show { opacity:1; transform:translateY(0); }
+
+    
+    /* Floating animation for icons for java ,python,web*/
+  @keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .float-icon {
+    animation: floatIcon 3.5s ease-in-out infinite;
+  }
+
+
+  /* =============== clean animated underline ========== */
+ 
+  .heading-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .heading-underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #a855f7, #6366f1, #ec4899);
+    animation: underlineGrow 1.2s ease forwards;
+  }
+
+  @keyframes underlineGrow {
+    from { width: 0; }
+    to   { width: 80%; }
+  }
+
+  /* Add project bookning form style project select styleing  */
+  
+    @keyframes floatIcon {0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .float-icon{animation:floatIcon 3s ease-in-out infinite}
+    .animate-pop{animation:pop .35s ease}
+    @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+
+    .input-error {
+    border-color: #ef4444 !important;
+  }
+  .error-text {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 2px;
+  }
+
+
+  /* Why Students Choose takeoff for Academic Project Support? */
+    .perspective { perspective: 1000px; }
+
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+  }
+
+  .flip-front, .flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 16px;
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  /*  =====================================================  Our Process  =======================================*/
+  .process-card{
+    background:#fff;
+    border-radius:18px;
+    padding:26px 20px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    transition:.45s ease;
+    transform-style: preserve-3d;
+    position:relative;
+  }
+  .process-card:hover{
+    transform: perspective(900px) rotateX(6deg) rotateY(-6deg) translateY(-8px);
+    box-shadow:0 20px 50px rgba(59,130,246,.35);
+  }
+  .process-card.active{
+    outline:3px solid #3b82f6;
+    box-shadow:0 0 0 3px rgba(59,130,246,.25), 0 0 30px rgba(59,130,246,.6);
+  }
+
+  /* Animated connectors */
+  .flow-path{
+    fill:none;
+    stroke:url(#flowGrad);
+    stroke-width:4;
+    stroke-dasharray:6 10;
+    animation: flow 2.5s linear infinite;
+    filter: drop-shadow(0 0 8px rgba(59,130,246,.7));
+  }
+  @keyframes flow { to { stroke-dashoffset:-40; } }
+
+  /* Sequential highlight glow */
+  .pulse {
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow:0 0 0 0 rgba(59,130,246,.6); }
+    70% { box-shadow:0 0 0 18px rgba(59,130,246,0); }
+    100% { box-shadow:0 0 0 0 rgba(59,130,246,0); }
+  }
+
+  /* Simple fade-in */
+  .fade-up{opacity:0; transform:translateY(24px); transition:.7s ease}
+  .fade-up.show{opacity:1; transform:translateY(0)}
+
+   /* =====================  About , contact  =============================*/
+    
+    .tilt {
+      transform-style: preserve-3d;
+      transition: transform .5s ease, box-shadow .5s ease;
+    }
+    .tilt:hover {
+      transform: perspective(900px) rotateX(6deg) rotateY(-6deg) translateY(-8px);
+      /* ✅ Changed to radium (neon green) glow */
+      box-shadow: 0 25px 60px rgba(0, 255, 128, .6);
+    }
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    .fade-up { opacity:0; transform:translateY(24px); transition:.8s ease; }
+    .fade-up.show { opacity:1; transform:translateY(0); }
+
+    
+  /* ==================== About Floating tech icons ==================================*/
+  .float-icon {
+    position: absolute;
+    animation: floatIcon 10s ease-in-out infinite;
+    opacity: 0.9;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,.15));
+  }
+  .float-icon.slow { animation-duration: 14s; }
+  .float-icon.fast { animation-duration: 7s; }
+
+  @keyframes floatIcon {
+    0%   { transform: translateY(0) rotate(0deg); }
+    50%  { transform: translateY(-22px) rotate(8deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+
+  
+/* ===================== GLOBAL MOBILE RESPONSIVE FIX ===================== */
+@media (max-width: 768px) {
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* Fix duplicate body padding issues */
+  body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Section spacing adjustment */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Headings scale */
+  h1 { font-size: 28px !important; line-height: 1.3; }
+  h2 { font-size: 22px !important; }
+  h3 { font-size: 18px !important; }
+
+  /* Navbar fix */
+  nav .max-w-7xl {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Hero section fix */
+  #home .min-h-\[50vh\] {
+    min-height: 60vh !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* Grid sections become 1 column */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Project cards spacing */
+  .group {
+    margin-bottom: 20px;
+  }
+
+  /* Flip cards height auto */
+  .flip-inner {
+    height: auto !important;
+    min-height: 200px;
+  }
+
+  /* Process cards spacing */
+  .process-card {
+    padding: 20px 16px !important;
+  }
+
+  /* Hide SVG curved connectors on mobile */
+  svg.absolute {
+    display: none !important;
+  }
+
+  /* About section fix */
+  #About {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  #About .max-w-6xl {
+    max-width: 100% !important;
+  }
+
+  #About .max-w-3xl {
+    max-width: 100% !important;
+  }
+
+  /* Hide floating tech icons on mobile */
+  #About .float-icon {
+    display: none !important;
+  }
+
+  /* Stats section */
+  .bg-gradient-to-r.from-indigo-600.to-purple-700 .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  /* Contact section layout */
+  #contact .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Modal width fix */
+  #projectsModal > div,
+  #detailsModal > div,
+  #bookModal > div,
+  #quickBookModal > div {
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+}
+
+/* ================= STATS MOBILE SINGLE ROW ================= */
+@media (max-width: 768px) {
+
+  /* Make stats container horizontal */
+  .bg-gradient-to-r.from-indigo-600.to-purple-700 .grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 16px !important;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  /* Each card width */
+  .bg-gradient-to-r.from-indigo-600.to-purple-700 .tilt {
+    min-width: 220px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Hide scrollbar (optional clean look) */
+  .bg-gradient-to-r.from-indigo-600.to-purple-700 .grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ================= PARAGRAPH MOBILE RESPONSIVE FIX ================= */
+@media (max-width: 768px) {
+
+  .max-w-5xl {
+    max-width: 100% !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    margin-top: 30px !important;
+  }
+
+  .max-w-5xl p {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 14px 8px;
+  }
+
+  .stat-card h3 {
+    font-size: 16px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+}
+
+/* ================= MOBILE AUTO SCROLL STATS ================= */
+
+@media (max-width: 768px) {
+
+  .stats-scroll {
+    animation: scrollStats 10s linear infinite;
+    width: max-content;
+  }
+
+  .stats-scroll > div {
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+
+}
+
+@keyframes scrollStats {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+</style>
+
+
+</head>
+<body class="bg-slate-50">
+
+<!-- ========================  NAVBAR ======================== -->
+<nav class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="text-xl font-bold text-indigo-600">Demo</div>
+
+    <!-- Desktop Menu -->
+<div class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+
+  <a href="#home" class="hover:text-indigo-600">🏠 Home</a>
+  <a href="#career" class="hover:text-indigo-600">💼 Career</a>
+
+  <!-- Projects (Click Based Desktop Dropdown) -->
+  <div class="relative">
+    <button id="projectsBtn" class="flex items-center gap-2 hover:text-indigo-600">
+      📂 Projects
+      <svg id="projectsArrow" class="w-4 h-4 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </button>
+
+    <!-- Main Dropdown -->
+    <div id="projectsMenu" class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg hidden p-2 space-y-2">
+
+      <!-- Minor -->
+      <div>
+        <button onclick="toggleDesktop('minorMenu')" class="w-full px-4 py-2 rounded hover:bg-indigo-50 flex justify-between">
+          🔹 Minor Projects
+          <span>▶</span>
+        </button>
+        <div id="minorMenu" class="hidden ml-4 mt-1 space-y-1">
+          <a href="Portfolio.html" class="block px-3 py-2 rounded hover:bg-indigo-50">Portfolio Websites</a>
+          <a href="E-commerce Store.html" class="block px-3 py-2 rounded hover:bg-indigo-50">E-commerce Store</a>
+          <a href="LMS Platform.html" class="block px-3 py-2 rounded hover:bg-indigo-50">LMS Platform</a>
+        </div>
+      </div>
+
+      <!-- Major -->
+      <div>
+        <button onclick="toggleDesktop('majorMenu')" class="w-full px-4 py-2 rounded hover:bg-indigo-50 flex justify-between">
+          🔸 Major Projects
+          <span>▶</span>
+        </button>
+        <div id="majorMenu" class="hidden ml-4 mt-1 space-y-1">
+          <a href="ERP System.html" class="block px-3 py-2 rounded hover:bg-indigo-50">ERP System</a>
+          <a href="CRM Platform.html" class="block px-3 py-2 rounded hover:bg-indigo-50">CRM Platform</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+   <a href="#About" class="hover:text-indigo-600">🏢 About</a>
+  <a href="#contact" class="hover:text-indigo-600">📞 Contact</a>
+</div>
+
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-y-0 right-0 w-72 bg-white shadow-2xl transform translate-x-full transition duration-300 p-6 space-y-4 md:hidden">
+
+    <button id="closeBtn" class="text-right w-full text-2xl">✕</button>
+
+    <a href="#home" class="block py-2 nav-m">🏠 Home</a>
+    <a href="#career" class="block py-2 nav-m">💼 Career</a>
+
+    <!-- Mobile Dropdown -->
+    <div>
+      <button onclick="toggleMobile('proj')" class="flex justify-between w-full py-2">
+        📂 Projects
+        <span id="projIcon">▼</span>
+      </button>
+
+      <div id="proj" class="hidden pl-4 space-y-2">
+        <button onclick="toggleMobile('minor')" class="flex justify-between w-full py-2">
+          🔹 Minor Projects <span>▼</span>
+        </button>
+        <div id="minor" class="hidden pl-4 space-y-1">
+          <a href="Portfolio.html" class="block py-1">Portfolio Websites</a>
+          <a href="E-commerce Store.html" class="block py-1">E-commerce Store</a>
+          <a href="LMS Platform.html" class="block py-1">LMS Platform</a>
+        </div>
+
+        <button onclick="toggleMobile('major')" class="flex justify-between w-full py-2">
+          🔸 Major Projects <span>▼</span>
+        </button>
+        <div id="major" class="hidden pl-4 space-y-1">
+          <a href="ERP System.html" class="block py-1">ERP System</a>
+          <a href="CRM Platform.html" class="block py-1">CRM Platform</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#About" class="block py-2 nav-m">🏢 About</a>
+    <a href="#contact" class="block py-2 nav-m">📞 Contact</a>
+  </div>
+</nav>
+
+<!--  =================================================  end of the nav bar  =============================================================-->
+
+
+<!-- ======================== HERO HEADER ======================== -->
+<section id="home" class="pt-5">
+  <div class="min-h-[50vh] flex items-center justify-center text-center px-6"
+       style="background: linear-gradient(90deg, #4f46e5, #7c3aed);">
+    <div class="text-white fade show">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide">
+        Welcome to  Demo
+      </h1>
+      <p class="text-base md:text-lg opacity-90">
+        Full working responsive demo project using HTML, CSS & JavaScript.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--  =================================================  end of the HERO HEADER  =============================================================-->
+
+<!-- ==================================================== CAREER (PROCESS) ================================================================== -->
+<section class="py-10" >
+  <div class="max-w-7xl mx-auto px-6 fade">
+    <div class="flex justify-center">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 heading-underline">
+     Our  
+    <span class="bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent">
+      Development
+    </span>
+    Journey
+  </h2>
+</div>
+
+
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
+        <svg class="w-14 h-14 mx-auto mb-3 text-indigo-600 float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M12 6v6l4 2"/>
+        </svg>
+        <h3 class="font-semibold">Planning</h3>
+        <p class="text-sm text-gray-600">Requirement Analysis</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
+        <svg class="w-14 h-14 mx-auto mb-3 text-emerald-600 float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M3 3h18v6H3zM3 9h18v12H3z"/>
+        </svg>
+        <h3 class="font-semibold">Design</h3>
+        <p class="text-sm text-gray-600">UI / UX Design</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
+        <svg class="w-14 h-14 mx-auto mb-3 text-pink-600 float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+        </svg>
+        <h3 class="font-semibold">Development</h3>
+        <p class="text-sm text-gray-600">Coding & Integration</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-2 transition">
+        <svg class="w-14 h-14 mx-auto mb-3 text-amber-500 float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <h3 class="font-semibold">Delivery</h3>
+        <p class="text-sm text-gray-600">Testing & Deployment</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  =================================================  end of the CAREER (PROCESS)  ===================================================-->
+
+<!--  ==================================================   Project Selection process  ================================================  -->
+
+<section id="career" class="max-w-1xl mx-auto px-6 py-5"> 
+  <div class="flex justify-center">
+    <h2 class="text-xl md:text-3xl font-extrabold text-center mb-12 heading-underline">
+      Empowering Your Ideas with 
+      <span class="bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent">
+        Smart Solutions
+      </span> 
+    </h2>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+   
+  <!-- JAVA -->
+  <div class="group relative bg-white rounded-2xl shadow-xl border border-red-200 overflow-hidden hover:-translate-y-2 transition">
+    <div class="h-40 flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100">
+      <div class="text-5xl float-icon">
+        <div class="float-icon w-16 h-16 text-red-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-full h-full">
+            <path fill="currentColor" d="M20 48h20c4 0 8-4 8-8H12c0 4 4 8 8 8z"/>
+            <path fill="currentColor" d="M48 24c0 4-4 8-8 8H16c-4 0-8-4-8-8V12h40v12z"/>
+            <path fill="currentColor" d="M44 12h6c4 0 6 2 6 6s-2 6-6 6h-6v-4h4c2 0 4-2 4-4s-2-4-4-4h-4z"/>
+            <path fill="currentColor" d="M30 6c2 3-3 5-3 8 2-2 6-3 6-6 0-2-1-3-3-4z"/>
+        </svg>
+    </div>
+
+      </div>
+    </div>
+    <div class="bg-red-600 text-white px-6 py-3 font-semibold">Java</div>
+
+    <div class="absolute inset-x-0 bottom-0 bg-white border-t border-red-200 p-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+      <h4 class="font-bold text-red-600 mb-2">Demo Projects</h4>
+      <ul class="text-sm space-y-1">
+        <li>📘 Student ERP</li>
+        <li>🏦 Banking App</li>
+        <li>📝 Online Exam</li>
+      </ul>
+      <button onclick="openModal('Java')" class="mt-3 w-full border border-red-500 text-red-600 py-1.5 rounded hover:bg-red-50">
+        View All
+      </button>
+
+        <button onclick="openQuickBook('Java')" class="mt-2 w-full bg-indigo-600 text-white py-1.5 rounded hover:bg-indigo-700">
+            📘 Book Your Java Project Here
+        </button>
+
+    </div>
+  </div>
+
+  <!-- PYTHON -->
+  <div class="group relative bg-white rounded-2xl shadow-xl border border-blue-200 overflow-hidden hover:-translate-y-2 transition">
+    <div class="h-40 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div class="text-5xl float-icon">🐍</div>
+    </div>
+    <div class="bg-blue-600 text-white px-6 py-3 font-semibold">Python</div>
+
+    <div class="absolute inset-x-0 bottom-0 bg-white border-t border-blue-200 p-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+      <h4 class="font-bold text-blue-600 mb-2">Demo Projects</h4>
+      <ul class="text-sm space-y-1">
+        <li>🤖 AI Chatbot</li>
+        <li>👁 Face Recognition</li>
+        <li>📈 Stock Predictor</li>
+      </ul>
+      <button onclick="openModal('Python')" class="mt-3 w-full border border-blue-500 text-blue-600 py-1.5 rounded hover:bg-blue-50">
+        View All
+      </button>
+
+     <button onclick="openQuickBook('Python')" class="mt-2 w-full bg-indigo-600 text-white py-1.5 rounded hover:bg-indigo-700">
+  📘 Book Your Python Project Here
+</button>
+
+
+    </div>
+  </div>
+
+  <!-- WEB -->
+  <div class="group relative bg-white rounded-2xl shadow-xl border border-purple-200 overflow-hidden hover:-translate-y-2 transition">
+    <div class="h-40 flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-100">
+      <div class="text-5xl float-icon">🌐</div>
+    </div>
+    <div class="bg-purple-600 text-white px-6 py-3 font-semibold">Web Development</div>
+
+    <div class="absolute inset-x-0 bottom-0 bg-white border-t border-purple-200 p-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+      <h4 class="font-bold text-purple-600 mb-2">Demo Projects</h4>
+      <ul class="text-sm space-y-1">
+        <li>💼 Portfolio</li>
+        <li>🛒 E-Commerce</li>
+        <li>🎓 LMS Platform</li>
+      </ul>
+      <button onclick="openModal('Web')" class="mt-3 w-full border border-purple-500 text-purple-600 py-1.5 rounded hover:bg-purple-50">
+        View All
+      </button>
+      
+        <button onclick="openQuickBook('Web Development')" class="mt-2 w-full bg-indigo-600 text-white py-1.5 rounded hover:bg-indigo-700">
+            📘 Book Your Web Development Project Here
+        </button>
+
+
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="projectsModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative animate-pop">
+    <button onclick="closeModal()" class="absolute top-2 right-3 text-xl">✕</button>
+    <h3 id="modalTitle" class="text-xl font-bold mb-4"></h3>
+    <ul id="modalList" class="space-y-2 text-sm"></ul>
+  </div>
+</div>
+
+<!-- DETAILS MODAL -->
+<div id="detailsModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+  <div class="bg-white rounded-xl max-w-xl w-full p-6 relative animate-pop">
+    <button onclick="closeDetailsModal()" class="absolute top-2 right-3 text-xl">✕</button>
+    <h3 id="detailsTitle" class="text-xl font-bold mb-3"></h3>
+
+    <div class="space-y-2 text-sm text-gray-700">
+      <p><b>Abstract:</b> <span id="detailsAbstract"></span></p>
+      <p><b>Introduction:</b> <span id="detailsIntro"></span></p>
+      <p><b>Objective:</b> <span id="detailsObjective"></span></p>
+    </div>
+
+    <button onclick="openBookForm()" class="mt-4 w-full bg-indigo-600 text-white py-2 rounded">
+      📘 Book This Project
+    </button>
+   
+
+  </div>
+</div>
+
+<!-- BOOKING FORM MODAL -->
+<div id="bookModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative animate-pop">
+    <button onclick="closeBookForm()" class="absolute top-2 right-3 text-xl">✕</button>
+    <h3 class="text-xl font-bold mb-4">Book Project</h3>
+
+    <form id="bookForm" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <!-- Name -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1118.364 4.56M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <input required class="w-full border p-2 rounded pl-10" placeholder="Name">
+      </div>
+
+      <!-- Email -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m8 0l-8 0m12 8H4a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+        </svg>
+        <input type="email" required class="w-full border p-2 rounded pl-10" placeholder="Email">
+      </div>
+
+      <!-- Phone -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 7-2 2a11 11 0 005 5l2-2 7 3v2a2 2 0 01-2 2h-1C8.163 22 2 15.837 2 8V7a2 2 0 012-2z"/>
+        </svg>
+        <input required type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}"
+            class="w-full border p-2 rounded pl-10 phone-input"
+            placeholder="Phone">
+        <p class="error-text hidden">Enter a valid 10-digit mobile number</p>
+
+      </div>
+
+      <!-- Domain -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <select id="domainSelect" class="w-full border p-2 rounded pl-10">
+          <option>Java</option>
+          <option>Python</option>
+          <option>Web</option>
+        </select>
+      </div>
+       
+
+      <!-- Description -->
+      <textarea class="md:col-span-2 border p-2 rounded" placeholder="Project Description"></textarea>
+
+      <button class="md:col-span-2 bg-green-600 text-white py-2 rounded">Submit</button>
+    </form>
+
+    <div id="successBox" class="hidden text-center py-6">
+      <div class="text-green-600 text-xl font-bold mb-2">🎉 Booking Successful!</div>
+      <p id="successText" class="text-gray-700"></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- QUICK BOOK MODAL -->
+<div id="quickBookModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative animate-pop">
+    <button onclick="closeQuickBook()" class="absolute top-2 right-3 text-xl">✕</button>
+    <h3 class="text-xl font-bold mb-4">Book Your Project</h3>
+
+    <form id="quickBookForm" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <!-- Domain -->
+      <div class="relative md:col-span-2">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <input id="quickDomain" readonly class="w-full border p-2 rounded pl-10 bg-gray-50" placeholder="Domain">
+      </div>
+
+      <!-- Name -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1118.364 4.56M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <input required class="w-full border p-2 rounded pl-10" placeholder="Name">
+      </div>
+
+      <!-- Email -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m8 0l-8 0m12 8H4a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+        </svg>
+        <input type="email" required class="w-full border p-2 rounded pl-10" placeholder="Email">
+      </div>
+
+      <!-- College -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/>
+        </svg>
+        <input required class="w-full border p-2 rounded pl-10" placeholder="College">
+      </div>
+
+      <!-- Phone -->
+      <div class="relative">
+        <svg class="w-5 h-5 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 7-2 2a11 11 0 005 5l2-2 7 3v2a2 2 0 01-2 2h-1C8.163 22 2 15.837 2 8V7a2 2 0 012-2z"/>
+        </svg>
+        <input required type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}"
+            class="w-full border p-2 rounded pl-10 phone-input"
+            placeholder="Phone">
+        <p class="error-text hidden">Enter a valid 10-digit mobile number</p>
+
+      </div>
+
+      <!-- Description -->
+      <textarea class="md:col-span-2 border p-2 rounded" placeholder="Project Description"></textarea>
+
+      <button class="md:col-span-2 bg-green-600 text-white py-2 rounded hover:bg-green-700">
+        Submit
+      </button>
+    </form>
+
+    <div id="quickSuccess" class="hidden text-center py-6">
+      <div class="text-green-600 text-xl font-bold mb-2">🎉 Booking Successful!</div>
+      <p id="quickSuccessText" class="text-gray-700"></p>
+    </div>
+  </div>
+</div>
+
+
+<!--   ==================================  Why Students Choose takeoff for Academic Project Support?  ==================================   -->
+<br>
+
+<hr>
+
+<br>
+<body class="py-5 px-16">
+
+<div class="max-w-6xl mx-auto text-center mb-10">
+  
+  <h2 class="text-xl md:text-3xl font-extrabold text-center mb-5 heading-underline">
+      Why Students Choose
+      <span class="bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent">
+        takeoff for Academic Project
+      </span> 
+      Support?
+    </h2>
+  <p class="text-gray-600 max-w-3xl mx-auto">
+    From innovative concepts to final implementation, our expert mentors provide complete project assistance designed to meet your academic goals.
+  </p>
+</div>
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+
+  <!-- CARD 1 -->
+  <div class="perspective">
+    <div class="flip-inner cursor-pointer" id="card-1" onclick="openCard(1)">
+      <div class="flip-front bg-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <div id="icon-1" class="text-blue-500 text-4xl mb-3 transition-transform duration-500">💡</div>
+        <h4 class="font-semibold">Innovative Project Ideas</h4>
+      </div>
+      <div class="flip-back bg-blue-500 text-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <h4 class="font-semibold mb-2">What You Get</h4>
+        <ul class="text-sm space-y-1">
+          <li>✔ Unique Ideas</li>
+          <li>✔ Experienced Mentors</li>
+          <li>✔ Step-by-step Guidance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="perspective">
+    <div class="flip-inner cursor-pointer" id="card-2" onclick="openCard(2)">
+      <div class="flip-front bg-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <div id="icon-2" class="text-red-500 text-4xl mb-3 transition-transform duration-500">👍</div>
+        <h4 class="font-semibold">Guaranteed Satisfaction</h4>
+      </div>
+      <div class="flip-back bg-red-500 text-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <h4 class="font-semibold mb-2">We Promise</h4>
+        <ul class="text-sm space-y-1">
+          <li>✔ 100% Satisfaction</li>
+          <li>✔ Quality Assurance</li>
+          <li>✔ Timely Delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="perspective">
+    <div class="flip-inner cursor-pointer" id="card-3" onclick="openCard(3)">
+      <div class="flip-front bg-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <div id="icon-3" class="text-green-500 text-4xl mb-3 transition-transform duration-500">💻</div>
+        <h4 class="font-semibold">On Demand Support</h4>
+      </div>
+      <div class="flip-back bg-green-500 text-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <h4 class="font-semibold mb-2">Support Includes</h4>
+        <ul class="text-sm space-y-1">
+          <li>✔ 24/7 Assistance</li>
+          <li>✔ Technical Help</li>
+          <li>✔ Continuous Updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="perspective">
+    <div class="flip-inner cursor-pointer" id="card-4" onclick="openCard(4)">
+      <div class="flip-front bg-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <div id="icon-4" class="text-orange-500 text-4xl mb-3 transition-transform duration-500">📁</div>
+        <h4 class="font-semibold">Customized Projects</h4>
+      </div>
+      <div class="flip-back bg-orange-500 text-white shadow-xl p-6 flex flex-col justify-center items-center">
+        <h4 class="font-semibold mb-2">Tailored Solutions</h4>
+        <ul class="text-sm space-y-1">
+          <li>✔ Based on Your Requirements</li>
+          <li>✔ Latest Technologies</li>
+          <li>✔ Flexible Modifications</li>
+        </ul>
+      </div>
+    </div>  
+  </div>
+</div>
+<!-- Supporting Paragraph -->
+<div class="max-w-5xl mx-auto mt-7  px-6 text-center">
+  <p class="text-gray-600 leading-relaxed">
+    We are your trusted partner for academic project support. 
+    Our team of engineering project consultants is dedicated to 
+    offering comprehensive guidance and practical recommendations 
+    tailored to your college projects. Beyond education, our services are designed to enhance your career growth by helping you apply knowledge effectively. 
+    We prioritize personalized interaction, ensuring our experts guide you in confidently putting theoretical concepts into practice. 
+    We are committed to meeting project deadlines and delivering solutions that align with students' unique requirements. 
+    Choosing us as your academic partner ensures the success and impact of your assignments.
+  </p>
+</div>
+
+
+<!--   =======================================  Our Process   =================================================================  -->
+
+<br>
+
+<hr>
+
+<br>
+<body class="py-16">
+
+<div class="max-w-7xl mx-auto px-6 text-center mb-10 fade-up">
+  <h2 class="text-xl md:text-3xl font-extrabold text-center mb-5 heading-underline">
+      Our 
+      <span class="bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 bg-clip-text text-transparent">
+        Process
+      </span> 
+    </h2>
+  <p class="text-gray-700">A structured journey from idea to final presentation</p>
+</div>
+
+<div class="max-w-7xl mx-auto px-6 relative fade-up">
+
+  <!-- SVG Curved Connectors -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none hidden md:block" viewBox="0 0 1200 420" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3b82f6"/>
+        <stop offset="50%" stop-color="#22c55e"/>
+        <stop offset="100%" stop-color="#6366f1"/>
+      </linearGradient>
+    </defs>
+
+    <path d="M150 120 C 350 30, 550 30, 750 120" class="flow-path"/>
+    <path d="M450 120 C 650 30, 850 30, 1050 120" class="flow-path"/>
+    <path d="M150 320 C 350 410, 550 410, 750 320" class="flow-path"/>
+    <path d="M450 320 C 650 410, 850 410, 1050 320" class="flow-path"/>
+  </svg>
+
+  <!-- Cards -->
+  <div id="processGrid" class="grid md:grid-cols-3 gap-10 relative z-10">
+
+   <div class="process-card">
+   <svg class="w-12 h-12 mx-auto mb-3 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 18h6"/>
+    <path d="M10 22h4"/>
+    <path d="M12 2a7 7 0 0 0-4 12c.5.5 1 1.5 1 2h6c0-.5.5-1.5 1-2a7 7 0 0 0-4-12z"/>
+  </svg>
+  <span class="text-blue-600 font-bold">#1</span>
+  <h4 class="font-semibold">PROJECT SELECTION</h4>
+  <p class="text-sm text-gray-600 mt-2">Choose a suitable project topic.</p>
+</div>
+
+
+    <div class="process-card">
+    <svg class="w-12 h-12 mx-auto mb-3 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <path d="M8 10h8M8 14h8M8 18h5"/>
+        <path d="M6 10l1 1 2-2"/>
+    </svg>
+
+      <span class="text-blue-600 font-bold">#2</span>
+      <h4 class="font-semibold">PROJECT PLANNING</h4>
+      <p class="text-sm text-gray-600 mt-2">Define scope, goals and timeline.</p>
+    </div>
+
+    <div class="process-card">
+    <svg class="w-12 h-12 mx-auto mb-3 text-yellow-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+
+      <span class="text-blue-600 font-bold">#3</span>
+      <h4 class="font-semibold">PROJECT RESEARCH</h4>
+      <p class="text-sm text-gray-600 mt-2">Gather references and tools.</p>
+    </div>
+
+    <div class="process-card">
+    <svg class="w-12 h-12 mx-auto mb-3 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+    </svg>
+
+      <span class="text-blue-600 font-bold">#4</span>
+      <h4 class="font-semibold">PROJECT DEVELOPMENT</h4>
+      <p class="text-sm text-gray-600 mt-2">Build and implement solution.</p>
+    </div>
+
+    <div class="process-card">
+    <svg class="w-12 h-12 mx-auto mb-3 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+    </svg>
+
+      <span class="text-blue-600 font-bold">#5</span>
+      <h4 class="font-semibold">PROJECT DOCUMENTATION</h4>
+      <p class="text-sm text-gray-600 mt-2">Prepare reports and documents.</p>
+    </div>
+
+    <div class="process-card">
+    <svg class="w-12 h-12 mx-auto mb-3 text-sky-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="14" rx="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+        <path d="M7 8h10M7 12h6"/>
+    </svg>
+
+      <span class="text-blue-600 font-bold">#6</span>
+      <h4 class="font-semibold">PROJECT PRESENTATION</h4>
+      <p class="text-sm text-gray-600 mt-2">Final presentation and review.</p>
+    </div>
+
+  </div>
+</div>
+
+<!--      ======================================= About seccion  ========================================         -->
+<br>
+<hr>
+<br>
+
+<body class="min-h-screen ">
+
+  <!-- ABOUT -->
+    
+  <section id="About" class="py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-purple-300/30 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 text-center fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">About </h2>
+      <p class="max-w-3xl mx-auto text-gray-600">
+        we empower businesses through innovation. Our expert team builds scalable digital solutions,
+        from custom software to complete digital strategies that help brands grow and succeed.
+      </p>
+      <button class="mt-6 px-6 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition tilt">
+        Tailwind CSS
+      </button>
+    </div>
+
+
+    <!-- =====================================  About Floating Tech Icons ===============================-->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+
+  <!-- Java -->
+  <svg class="float-icon slow w-12 h-12 text-red-500" style="top:15%; left:10%;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M9 18h6"/>
+    <path d="M10 22h4"/>
+    <path d="M12 2a7 7 0 0 0-4 12c.5.5 1 1.5 1 2h6c0-.5.5-1.5 1-2a7 7 0 0 0-4-12z"/>
+  </svg>
+
+  <!-- Python -->
+  <svg class="float-icon fast w-12 h-12 text-yellow-500" style="top:25%; right:12%;" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2c3 0 3 2 3 2v3H9S7 7 7 10s2 3 2 3h6s2 0 2 3-2 3-2 3H9s-2 0-2-3"/>
+  </svg>
+
+  <!-- Web Dev -->
+  <svg class="float-icon w-12 h-12 text-indigo-500" style="bottom:20%; left:18%;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M12 2a15 15 0 0 1 0 20"/>
+  </svg>
+
+  <!-- VLSI / Chip -->
+  <svg class="float-icon slow w-12 h-12 text-green-500" style="bottom:18%; right:15%;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="4" y="4" width="16" height="16" rx="2"/>
+    <path d="M9 9h6v6H9z"/>
+    <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+  </svg>
+
+</div>
+
+  </section>
+
+<!-- =====================================  STATS ========================================== -->
+  <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 overflow-hidden">
+      <div class="stats-scroll flex md:grid md:grid-cols-4 gap-4 md:gap-10 text-center fade-up">
+          <div class="tilt p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-2">✓</div>
+            <h3 class="text-2xl font-bold">2500+</h3>
+            <p class="text-sm opacity-80">Happy Clients</p>
+          </div>
+          <div class="tilt p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-2">📁</div>
+            <h3 class="text-2xl font-bold">40+</h3>
+            <p class="text-sm opacity-80">Projects</p>
+          </div>
+          <div class="tilt p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-2">⏱</div>
+            <h3 class="text-2xl font-bold">24/7</h3>
+            <p class="text-sm opacity-80">Support</p>
+          </div>
+          <div class="tilt p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-2">⭐</div>
+            <h3 class="text-2xl font-bold">4.1</h3>
+            <p class="text-sm opacity-80">Client Rating</p>
+          </div>
+        </div>
+    </div>
+
+  </section>
+
+
+  <!-- ====================================  CONTACT ======================================= -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center fade-up">
+
+      <!-- Student Illustration (SVG) -->
+      <div class="flex justify-center">
+        <div class="float tilt">
+          <svg width="580" height="500" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="90" cy="36" r="24" fill="#6366F1"/>
+            <rect x="45" y="70" width="90" height="72" rx="22" fill="#6366F1"/>
+            <rect x="26" y="86" width="26" height="48" rx="13" fill="#22C55E"/>
+            <rect x="128" y="86" width="26" height="48" rx="13" fill="#22C55E"/>
+            <rect x="64" y="150" width="16" height="36" rx="8" fill="#F59E0B"/>
+            <rect x="100" y="150" width="16" height="36" rx="8" fill="#F59E0B"/>
+            <!-- Book -->
+            <rect x="72" y="92" width="36" height="22" rx="4" fill="#fff"/>
+            <line x1="90" y1="92" x2="90" y2="114" stroke="#6366F1" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-center" >Get in Touch </h3>
+        <form class="space-y-4">
+          <input class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500" placeholder="Your Name" required />
+          <input type="email" class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500" placeholder="Your Email" required />
+          <select class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500" required>
+            <option value="">Select a Service</option>
+            <option>Java</option>
+            <option>Python</option>
+            <option>Web Development</option>
+          </select>
+          <textarea class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500" rows="4" placeholder="Your Message"></textarea>
+          <button type="submit" class="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition tilt">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!--  ========================================  Footer  =========================== -->
+
+  <footer class="bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-900 text-slate-300">
+  <div class="max-w-7x1 mx-auto px-6 py-5 grid md:grid-cols-3 gap-10">
+
+    <!-- Company -->
+    <div>
+      <h3 class="text-white text-xl font-bold mb-3">Demo</h3>
+      <p class="text-slate-400 leading-relaxed">
+        Empowering businesses with innovative software solutions and strategic digital marketing services.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="text-white font-semibold mb-3">Contact</h4>
+      <p class="text-slate-400 mb-1">
+        Email: <a href="mailto:info@dizbloomtech.com" class="text-indigo-400 hover:underline">info@dizbloomtech.com</a>
+      </p>
+      <p class="text-slate-400">
+        Phone: <a href="tel:+911234567890" class="text-indigo-400 hover:underline">+91 12345 67890</a>
+      </p>
+    </div>
+
+    <!-- Address -->
+    <div>
+      <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z"/>
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            d="M19.5 8c0 7-7.5 13-7.5 13S4.5 15 4.5 8a7.5 7.5 0 1115 0z"/>
+        </svg>
+        Address
+      </h4>
+      <p class="text-slate-400 leading-relaxed">
+        Innov8 Mantri Commercio Tower A, 5th Floor, DEETA Construction Pvt. Ltd,  
+        Devarabisanahalli, Bellandur, Bengaluru, Karnataka – 560103
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-white/10"></div>
+
+  <!-- Bottom Bar -->
+  <div class= "max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+    <p>© 2026 Dizbloom Technologies. All rights reserved.</p>
+
+    <!-- Social Icons -->
+    <div class="flex gap-3">
+      <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.98h4.56V24H.22zM7.98 8.98h4.38v2.05h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 6.99V24h-4.56v-6.71c0-1.6-.03-3.66-2.23-3.66-2.23 0-2.57 1.74-2.57 3.54V24H7.98z"/>
+        </svg>
+      </a>
+
+      <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 transition">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.056 1.97.246 2.43.412a4.9 4.9 0 011.77 1.15 4.9 4.9 0 011.15 1.77c.166.46.356 1.26.412 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.246 1.97-.412 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.46.166-1.26.356-2.43.412-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.246-2.43-.412a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.166-.46-.356-1.26-.412-2.43C2.172 15.584 2.16 15.2 2.16 12s.012-3.584.07-4.85c.056-1.17.246-1.97.412-2.43a4.9 4.9 0 011.15-1.77 4.9 4.9 0 011.77-1.15c.46-.166 1.26-.356 2.43-.412C8.416 2.172 8.8 2.16 12 2.16zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm6.406-1.845a1.54 1.54 0 11-3.08 0 1.54 1.54 0 013.08 0z"/>
+        </svg>
+      </a>
+
+      <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gray-700 transition">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.48 5.94.43.38.82 1.12.82 2.26v3.35c0 .32.22.7.83.58A12 12 0 0012 .5z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+<!--  ===================================== Nav bar Script  ========================================================  -->
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.onclick = () => mobileMenu.classList.remove('translate-x-full');
+  closeBtn.onclick = () => mobileMenu.classList.add('translate-x-full');
+
+  function toggleMobile(id) {
+    document.getElementById(id).classList.toggle('hidden');
+  }
+
+  document.querySelectorAll('.nav-m').forEach(link => {
+    link.onclick = () => mobileMenu.classList.add('translate-x-full');
+  });
+
+
+  const projectsBtn = document.getElementById("projectsBtn");
+  const projectsMenu = document.getElementById("projectsMenu");
+  const projectsArrow = document.getElementById("projectsArrow");
+
+  projectsBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    projectsMenu.classList.toggle("hidden");
+    projectsArrow.classList.toggle("rotate-180");
+  });
+
+  function toggleDesktop(id) {
+    document.getElementById(id).classList.toggle("hidden");
+  }
+
+  // Close dropdown when clicking outside (desktop only)
+  document.addEventListener("click", (e) => {
+    if (!projectsMenu.contains(e.target) && !projectsBtn.contains(e.target)) {
+      projectsMenu.classList.add("hidden");
+      projectsArrow.classList.remove("rotate-180");
+      document.getElementById("minorMenu").classList.add("hidden");
+      document.getElementById("majorMenu").classList.add("hidden");
+    }
+  });
+
+  //  ===============================================  HERO HEADER  =============================================================
+
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".fade").forEach(el => el.classList.add("show"));
+  });
+
+  //  ===============================================   Project Selection process   ==================================================
+
+  const projectData = {
+    Java: [
+      { name: "Student ERP System", icon: "📘" },
+      { name: "Banking Application", icon: "🏦" },
+      { name: "Online Exam Portal", icon: "📝" },
+      { name: "Library Management", icon: "📚" }
+    ],
+    Python: [
+      { name: "AI Chatbot", icon: "🤖" },
+      { name: "Face Recognition", icon: "👁" },
+      { name: "Stock Price Predictor", icon: "📈" },
+      { name: "Spam Classifier", icon: "✉️" }
+    ],
+    Web: [
+      { name: "Portfolio Website", icon: "💼" },
+      { name: "E-Commerce Store", icon: "🛒" },
+      { name: "LMS Platform", icon: "🎓" },
+      { name: "Landing Page Builder", icon: "🧩" }
+    ]
+  };
+
+  function openModal(domain) {
+    const modal = document.getElementById("projectsModal");
+    const title = document.getElementById("modalTitle");
+    const list = document.getElementById("modalList");
+
+    title.innerText = domain + " – Demo Projects";
+    list.innerHTML = "";
+
+    projectData[domain].forEach(p => {
+      list.innerHTML += `
+        <li class="flex items-center gap-2 p-2 rounded border hover:bg-slate-50">
+          <span class="text-lg">${p.icon}</span>
+          <span>${p.name}</span>
+        </li>`;
+    });
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("projectsModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+
+  const projectDetails = {
+    "Student ERP System": { abs: "ERP system for colleges.", intro: "Manage students and staff.", obj: "Automate administration." },
+    "Banking Application": { abs: "Online banking platform.", intro: "Secure money transfer.", obj: "Digital banking solution." },
+    "Online Exam Portal": { abs: "Exam management system.", intro: "Conduct online exams.", obj: "Paperless exams." },
+    "Library Management": { abs: "Library software.", intro: "Manage books.", obj: "Automate library work." },
+
+    "AI Chatbot": { abs: "AI powered chatbot.", intro: "Automatic replies.", obj: "24/7 support." },
+    "Face Recognition": { abs: "AI face detection.", intro: "Recognize faces.", obj: "Improve security." },
+    "Stock Price Predictor": { abs: "ML stock prediction.", intro: "Predict stock prices.", obj: "Assist traders." },
+    "Spam Classifier": { abs: "Spam email filter.", intro: "Detect spam.", obj: "Inbox safety." },
+
+    "Portfolio Website": { abs: "Personal portfolio.", intro: "Showcase skills.", obj: "Online branding." },
+    "E-Commerce Store": { abs: "Online shopping site.", intro: "Sell products.", obj: "Digital sales." },
+    "LMS Platform": { abs: "Learning platform.", intro: "Online courses.", obj: "Remote education." },
+    "Landing Page Builder": { abs: "Page builder tool.", intro: "Create landing pages.", obj: "Marketing pages." }
+  };
+
+  let selectedProject = "";
+
+  // Make project name clickable (without changing your existing modal creation logic)
+  const originalOpenModal = openModal;
+  openModal = function(domain) {
+    originalOpenModal(domain);
+    setTimeout(() => {
+      document.querySelectorAll("#modalList li").forEach(li => {
+        li.onclick = () => {
+          const name = li.innerText.replace(/^[^\w]+/, '').trim();
+          selectedProject = name;
+          const d = projectDetails[name];
+          document.getElementById("detailsTitle").innerText = name;
+          document.getElementById("detailsAbstract").innerText = d.abs;
+          document.getElementById("detailsIntro").innerText = d.intro;
+          document.getElementById("detailsObjective").innerText = d.obj;
+
+          document.getElementById("projectsModal").classList.add("hidden");
+          document.getElementById("detailsModal").classList.remove("hidden");
+          document.getElementById("detailsModal").classList.add("flex");
+        };
+      });
+    }, 100);
+  };
+
+  function closeDetailsModal(){
+    document.getElementById("detailsModal").classList.add("hidden");
+  }
+
+  function openBookForm(){
+    document.getElementById("detailsModal").classList.add("hidden");
+    document.getElementById("bookModal").classList.remove("hidden");
+    document.getElementById("bookModal").classList.add("flex");
+  }
+
+  document.getElementById("bookForm").addEventListener("submit", e => {
+    e.preventDefault();
+    document.getElementById("bookForm").classList.add("hidden");
+    document.getElementById("successBox").classList.remove("hidden");
+    document.getElementById("successText").innerText =
+      `Your project "${selectedProject}" has been booked successfully!`;
+  });
+
+  function closeBookForm(){
+    document.getElementById("bookModal").classList.add("hidden");
+    document.getElementById("bookForm").classList.remove("hidden");
+    document.getElementById("successBox").classList.add("hidden");
+  }
+
+  let selectedDomain = "Java"; // default
+
+  // Hook into your existing openModal to track domain
+  const originalOpenModalFn = openModal;
+  openModal = function(domain) {
+    selectedDomain = domain === "Web" ? "Web Development" : domain;
+    originalOpenModalFn(domain);
+  };
+
+  // When opening booking form, auto set domain
+  const originalOpenBookFormFn = openBookForm;
+  openBookForm = function() {
+    originalOpenBookFormFn();
+    const domainSelect = document.getElementById("domainSelect");
+    if (domainSelect) domainSelect.value = selectedDomain;
+  };
+
+  // Enhanced success animation with name + project
+  document.getElementById("bookForm").addEventListener("submit", e => {
+    e.preventDefault();
+
+    const nameInput = document.querySelector('#bookForm input[placeholder="Name"]');
+    const studentName = nameInput ? nameInput.value : "Student";
+
+    const successBox = document.getElementById("successBox");
+    const successText = document.getElementById("successText");
+
+    successText.innerHTML = `
+      🎉 <b>${studentName}</b>, your project 
+      <span class="text-indigo-600 font-semibold">"${selectedProject}"</span> 
+      under <b>${selectedDomain}</b> has been booked successfully!
+    `;
+
+    document.getElementById("bookForm").classList.add("hidden");
+    successBox.classList.remove("hidden");
+    successBox.classList.add("animate-pop");
+  });
+
+
+
+  function openQuickBook(domain) {
+    document.getElementById("quickDomain").value = domain;
+    document.getElementById("quickBookModal").classList.remove("hidden");
+    document.getElementById("quickBookModal").classList.add("flex");
+  }
+
+  function closeQuickBook() {
+    document.getElementById("quickBookModal").classList.add("hidden");
+  }
+
+  document.getElementById("quickBookForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = this.querySelector('input[placeholder="Name"]').value;
+    const domain = document.getElementById("quickDomain").value;
+
+    this.classList.add("hidden");
+    document.getElementById("quickSuccess").classList.remove("hidden");
+    document.getElementById("quickSuccessText").innerText =
+      `${name}, your project booking request for ${domain} has been submitted successfully!`;
+  });
+
+  // ==================================  Why Students Choose takeoff for Academic Project Support?  ==========================
+
+  function openCard(id) {
+
+  // Close all cards first
+  document.querySelectorAll(".flip-inner").forEach((card, index) => {
+    const icon = document.getElementById(`icon-${index + 1}`);
+    card.classList.remove("flipped");
+    if (icon) icon.classList.remove("rotate-180");
+  });
+
+  // Open selected card
+  const selectedCard = document.getElementById(`card-${id}`);
+  const selectedIcon = document.getElementById(`icon-${id}`);
+
+  selectedCard.classList.add("flipped");
+  selectedIcon.classList.add("rotate-180");
+}
+
+
+function openCard(id) {
+
+  const selectedCard = document.getElementById(`card-${id}`);
+  const selectedIcon = document.getElementById(`icon-${id}`);
+  const isAlreadyOpen = selectedCard.classList.contains("flipped");
+
+  // Close all cards first
+  document.querySelectorAll(".flip-inner").forEach((card, index) => {
+    const icon = document.getElementById(`icon-${index + 1}`);
+    card.classList.remove("flipped");
+    if (icon) icon.classList.remove("rotate-180");
+  });
+
+  // If it was already open, just close it (toggle off)
+  if (isAlreadyOpen) return;
+
+  // Otherwise open the selected one
+  selectedCard.classList.add("flipped");
+  selectedIcon.classList.add("rotate-180");
+}
+// ====================================================  Our Process  =====================================
+
+  // Fade in section
+  document.querySelectorAll('.fade-up').forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('show'), i*200);
+  });
+
+  // Sequential highlight one by one
+  const cards = document.querySelectorAll('.process-card');
+  let idx = 0;
+  setInterval(()=>{
+    cards.forEach(c => c.classList.remove('active','pulse'));
+    cards[idx].classList.add('active','pulse');
+    idx = (idx + 1) % cards.length;
+  }, 2200);
+
+  //  ========================== About ,contact ==========================
+  // Fade-in on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
+    }, { threshold: .2 });
+
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+</script>
+
+
+</body>
+</html>
